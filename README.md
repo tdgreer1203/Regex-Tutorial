@@ -86,6 +86,6 @@ There is a combination of four types of "lookaround" operators:
 - (?<!Y)X - Is the negation of the previous example. Known as a negative lookbehind. 
 
 ## Author
-(Theo Greer)[https://github.com/tdgreer1203]
+[Theo Greer](https://github.com/tdgreer1203)
 
 I am an aspiring software developer who is currently learning JavaScript. My interests are in fullstack development, and I would like to work for a company with a great training/mentoring program. I feel this would be critical to my success in the industry. I currently reside in the Orlando area, and am open to any/all local/remote positions. 
