@@ -30,8 +30,8 @@ Regex Anchors are used to notate positions, rather than characters. There are to
 
 ### Quantifiers
 Quantifiers determine the number of instances a string must have for the searched pattern. 
-- + - means there must be at least one occurence of the pattern in the string.
-- * - means there can be 0 or more of the preceding character (continues for each matching character).
+- \+ - means there must be at least one occurence of the pattern in the string.
+- \* - means there can be 0 or more of the preceding character (continues for each matching character).
 - ? - means there can be 0 or more of the preceeding character (stops after first instance).
 - {X} - specifies the number of characters that must be in a row. 
 - {X, Y} - matches a sequence of numbers from x to y. 
@@ -86,6 +86,6 @@ There is a combination of four types of "lookaround" operators:
 - (?<!Y)X - Is the negation of the previous example. Known as a negative lookbehind. 
 
 ## Author
-Theo Greer[https://github.com/tdgreer1203]
+(Theo Greer)[https://github.com/tdgreer1203]
 
 I am an aspiring software developer who is currently learning JavaScript. My interests are in fullstack development, and I would like to work for a company with a great training/mentoring program. I feel this would be critical to my success in the industry. I currently reside in the Orlando area, and am open to any/all local/remote positions. 
