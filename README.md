@@ -96,8 +96,34 @@ In the repo referenced above, triestpa gives a few examples we will take a look 
   console.log(result)
 ```
 
-In this example, 
+In this example, triestpa's regex is doing the following:
+1. Match any number from 1-31 ([1-9]|[12]\d|3[01]) with an optional 0 in front (0?) of the first set (sets seperated by | operator.
+2. Look for a separating / or - symbol.
+3. In the same fashion as number 1, search for any number between 1-12.
+4. Use the same pattern from number 2 to match for a separating symbol.
+5. Look for any four-digit decimal number.
 
+Triestpa then goes on to declare a string with a date in it, where the date is formatted as DD/MM/YYYY. A subst variable is also created, that matches the pattern of the regex. In the subst variable, each $# represents the desired pattern found in the regex expression (see numbered list above). This means where you see $3, it matches on any number, 1-12. Where you see $2, it matches on eiwther the / or - symbol. Using the string method 'replace', Triestpa then reorders the date found in declared string, to match the pattern (MM/DD/YYYY). 
+
+The next example we will look at is the email validation string:
+
+```
+function isValidEmail (input) {
+  const regex = /^[^@\s]+@[^@\s]+\.\w{2,6}$/g;
+  const result = regex.exec(input)
+
+  // If result is null, no match was found
+  return !!result
+}
+```
+In this example, triestpa's regex is doing the following:
+1. Match any characters excluding the '@' and white space [^@\s]
+2. The symbols matched in number 1 should come before the '@' symbol.
+3. Match any characters excluding the '@' and white space after the @ symbol.
+4. The symbols matched in number 3 should come before a '.'. 
+5. Match any characters with a length of 2-6.
+
+The function just returns true of false, based on the match. 
 
 ## Author
 [Theo Greer](https://github.com/tdgreer1203)
