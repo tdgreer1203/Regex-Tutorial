@@ -1,6 +1,6 @@
 # JavaScript's Regex
 
-This is an in-depth look at the Regex library that comes packaged with JavaScript. 
+This is an in-depth look at the Regex library that comes packaged with JavaScript. To dive deeper into how regex works, I will be using examples from code snippets found in [this repo](https://github.com/triestpa/You-Should-Learn-Regex.git) by [triestpa](https://github.com/triestpa).  
 
 ## Summary
 
@@ -21,7 +21,7 @@ Regular Expressions are used as advanced search patterns within strings. With ma
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
-This regex contains two methods, exec() and test(). These methods are often used in combination with the string methods that JavaScript posesses. 
+This regex contains two methods, exec() and test(). These methods are often used in combination with the string methods that JavaScript posesses. For the purposes of this tutorial, triestpa mainly uses the exec() method to seach strings.
 
 ### Anchors
 Regex Anchors are used to notate positions, rather than characters. There are to anchor characters in JavaScript's Regex function. 
@@ -84,6 +84,20 @@ There is a combination of four types of "lookaround" operators:
 - X(?!Y) - Is the negation of the previous example. Known as a negative lookahead.
 - (?<=Y)X - This pattern is called a positive lookbehind, and would match any instance of X that is behind Y. 
 - (?<!Y)X - Is the negation of the previous example. Known as a negative lookbehind. 
+
+### Examples
+In the repo referenced above, triestpa gives a few examples we will take a look at. The first being:
+
+```
+  const regex = /\b(0?[1-9]|[12]\d|3[01])([ \/\-])(0?[1-9]|1[012])\2(\d{4})/
+  const str = `Today's date is 18/09/2017`
+  const subst = `$3$2$1$2$4`
+  const result = str.replace(regex, subst)
+  console.log(result)
+```
+
+In this example, 
+
 
 ## Author
 [Theo Greer](https://github.com/tdgreer1203)
