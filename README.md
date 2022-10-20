@@ -87,15 +87,13 @@ There is a combination of four types of "lookaround" operators:
 
 ### Examples
 In the repo referenced above, triestpa gives a few examples we will take a look at. The first being:
-
 ```
-  const regex = /\b(0?[1-9]|[12]\d|3[01])([ \/\-])(0?[1-9]|1[012])\2(\d{4})/
-  const str = `Today's date is 18/09/2017`
-  const subst = `$3$2$1$2$4`
-  const result = str.replace(regex, subst)
-  console.log(result)
+ const regex = /\b(0?[1-9]|[12]\d|3[01])([ \/\-])(0?[1-9]|1[012])\2(\d{4})/
+ const str = `Today's date is 18/09/2017`
+ const subst = `$3$2$1$2$4`
+ const result = str.replace(regex, subst)
+ console.log(result)
 ```
-
 In this example, triestpa's regex is doing the following:
 1. Match any number from 1-31 ([1-9]|[12]\d|3[01]) with an optional 0 in front (0?) of the first set (sets seperated by | operator.
 2. Look for a separating / or - symbol.
@@ -106,7 +104,6 @@ In this example, triestpa's regex is doing the following:
 Triestpa then goes on to declare a string with a date in it, where the date is formatted as DD/MM/YYYY. A subst variable is also created, that matches the pattern of the regex. In the subst variable, each $# represents the desired pattern found in the regex expression (see numbered list above). This means where you see $3, it matches on any number, 1-12. Where you see $2, it matches on eiwther the / or - symbol. Using the string method 'replace', Triestpa then reorders the date found in declared string, to match the pattern (MM/DD/YYYY). 
 
 The next example we will look at is the email validation string:
-
 ```
 function isValidEmail (input) {
   const regex = /^[^@\s]+@[^@\s]+\.\w{2,6}$/g;
